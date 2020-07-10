@@ -1,4 +1,4 @@
-package com.bridgelabz.CabInvoiceTest;
+package com.bridgelabz.CabInvoice.CabInvoice;
 
 public class Ride {
       public final double distance;
