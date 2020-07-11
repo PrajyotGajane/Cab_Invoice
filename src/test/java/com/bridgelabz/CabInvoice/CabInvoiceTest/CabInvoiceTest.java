@@ -57,4 +57,12 @@ public class CabInvoiceTest {
             InvoiceSummary expectedSummery = new InvoiceSummary(3, 1063.25);
             Assert.assertEquals(expectedSummery, invoiceSummery);
       }
+      @Test
+      public void givenPremiumLessDistanceOrTime_ShouldReturnMinFare() {
+            InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
+            double distance = 0.1;
+            int time = 1;
+            double fare = invoiceGenerator.calculateFare(RideType.PREMIUM, distance, time);
+            Assert.assertEquals(20, fare, 0.0);
+      }
 }
